@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col pr-4">
+            <h1>Is Site Down for you?</h1>
+            <hr />
+            <form action="status" method="post">
+                <div class="form-group">
+                    <input type="text" name="domain" placeholder="example.com" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-success">Check Status</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

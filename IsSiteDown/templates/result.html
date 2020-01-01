@@ -1,0 +1,26 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+    <h1>Result</h1>
+    <hr/>
+    <p>
+        {% if result_status == "200" %}
+        <div class="alert alert-success">
+            Site status up for everyone.
+        </div>
+
+        Site Status Code: {{ result_status }}
+
+        {% else %}
+
+        <div class="alert alert-danger">
+            Site status down it's not just you.
+        </div>
+
+        Site Status Code: {{ result_status }}
+
+        {% endif %}
+    </p>
+
+{% endblock %}
